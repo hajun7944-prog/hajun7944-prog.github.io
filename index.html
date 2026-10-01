@@ -385,7 +385,11 @@
   .contact-peek { position: absolute; right: clamp(-40px, 2vw, 60px); bottom: 0; width: clamp(220px, 30vw, 420px); transform: translateY(60%) rotate(-10deg); transition: transform 1.4s var(--ease) .2s; pointer-events: none; }
   .contact.in .contact-peek { transform: translateY(12%) rotate(-4deg); }
   .contact footer { position: relative; z-index: 2; margin-top: clamp(80px, 10vw, 140px); display: flex; justify-content: flex-start; column-gap: 40px; flex-wrap: wrap; gap: 12px; font-size: 14px; border-top: 1px solid #1113; padding-top: 18px; }
-  @media (max-width: 760px) { .contact-peek { width: 190px; right: -30px; opacity: .85; } }
+  @media (max-width: 760px) {
+    .contact-peek { width: 150px; right: -26px; opacity: .85; }
+    .contact { padding-bottom: 96px; }                          /* 하단 메뉴 바에 가리지 않게 */
+    .contact footer { flex-direction: column; gap: 8px; padding-right: 110px; }   /* 캐릭터와 글자가 겹치지 않게 */
+  }
 
   /* ================= MODAL ================= */
   .modal { position: fixed; inset: 0; z-index: 1100; display: none; align-items: center; justify-content: center; padding: 64px var(--gutter) var(--gutter); background: rgba(8,8,10,.9); backdrop-filter: blur(10px); }
