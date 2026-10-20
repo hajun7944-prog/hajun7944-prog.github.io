@@ -585,7 +585,7 @@
             <span class="g-no">01</span>
             <h3>AI 콘텐츠 제작 파이프라인</h3>
             <p class="g-hook">리서치부터 편집까지, 한 흐름으로</p>
-            <p class="g-body">뮤직비디오 · 브랜드 필름 · 드라마 · 공익 캠페인에 걸쳐 리서치 → 프롬프트 설계 → 이미지/영상 생성 → 편집까지 이어지는 제작 흐름을 반복했습니다.</p>
+            <p class="g-body">광고 · 브랜드 필름 · 뮤직비디오 · 드라마 · 3D 시네마틱에 걸쳐 리서치 → 프롬프트 설계 → 이미지/영상 생성 → 편집까지 이어지는 제작 흐름을 반복했습니다.</p>
           </div>
         </article>
         <article class="grow reveal" style="--i:1">
@@ -653,7 +653,7 @@
             <span class="tab"></span>
             <span class="grid">
               <img src="assets/img/pf_lune_thumb.jpg" alt="" loading="lazy">
-              <img src="assets/img/pf_green_thumb.jpg" alt="" loading="lazy">
+              <img src="assets/img/still_thumb.jpg" alt="" loading="lazy">
               <img src="assets/img/image2.jpg" alt="" loading="lazy">
               <img src="assets/img/image3.jpg" alt="" loading="lazy">
             </span>
@@ -702,6 +702,24 @@
  * drive: 구글 드라이브 파일 ID (공유 설정이 "링크가 있는 모든 사용자"여야 재생됩니다)
  */
 const PROJECTS = [
+  {
+    id: "still", doc: { file: "assets/docs/work-still.pdf", name: "STILL 작품 소개서", size: "4.3MB" }, title: "STILL", en: "Noise Cancelling Headphones · AI Brand Film",
+    category: "개인 프로젝트 · 가상 브랜드 헤드폰 광고",
+    thumb: "assets/img/still_thumb.jpg", drive: "",
+    dl: { file: "assets/video/jeong-hajun-00-still.mp4", name: "정하준_STILL.mp4", size: "22MB", compressed: true }, duration: "0:35",
+    meta: [["기간", "2026.10"], ["팀 구성", "개인 프로젝트 (1인)"], ["담당", "브랜드·기획 · AI 이미지/영상 생성 · 사운드 · 편집"], ["핵심 툴", "Higgsfield, ElevenLabs, Suno, Premiere Pro"]],
+    quote: "멈춘 세상, 흐르는 나.",
+    desc: [
+      "키보드, 전화벨, 복합기, 쏟아지는 알림까지\n업무 중 방해를 소리와 떠다니는 알림창으로 보여주고,\n헤드폰을 쓰는 순간 그 혼란이 멈추는 가상 브랜드 광고입니다.",
+      "제품 시트를 먼저 설계해 모든 장면의 기준으로 삼았고,\n착용 전의 빠른 컷과 착용 후의 긴 호흡으로\n소음에서 몰입으로 넘어가는 순간을 표현했습니다.",
+    ],
+    contrib: "브랜드·제품 설정부터 AI 이미지·영상 생성, 효과음·음악, 편집까지 1인 제작",
+    cuts: [
+      ["assets/img/cut_still_1.jpg", "Before · 종이가 날리는 복합기"],
+      ["assets/img/cut_still_2.jpg", "해방 · 유리처럼 부서지는 알림창"],
+      ["assets/img/cut_still_3.jpg", "제품 · 실크 천 위의 STILL 헤드폰"],
+    ],
+  },
   {
     id: "lune", doc: { file: "assets/docs/work-lune.pdf", name: "뤼느 작품 소개서", size: "1.9MB" }, title: "LUNE 뤼느", en: "AI-Generated Brand Film",
     category: "개인 프로젝트 · AI 향수 브랜드 필름",
@@ -791,24 +809,6 @@ const PROJECTS = [
       ["assets/img/cut_yeoju_1.jpg", "수묵 · 부채를 든 종대"],
       ["assets/img/cut_yeoju_2.jpg", "담채 · 세종대왕릉 영녕릉"],
       ["assets/img/cut_yeoju_3.jpg", "채색 · 등불 산책로에서 셀카를 찍는 종대"],
-    ],
-  },
-  {
-    id: "green", doc: { file: "assets/docs/work-green.pdf", name: "더 좋은 tomorrow 작품 소개서", size: "3.2MB" }, title: "더 좋은 tomorrow", en: "Green Remodeling 42s AI Film",
-    category: "제6회 그린리모델링 챌린지 · 42초 AI 영화제",
-    thumb: "assets/img/pf_green_thumb.jpg", drive: "1-KP2zoCrTK-RX2rJxreSkPmlWYaWAcFI",
-    dl: { file: "assets/video/jeong-hajun-02-green.mp4", name: "정하준_더 좋은 tomorrow.mp4", size: "73MB", compressed: true }, duration: "0:40",
-    meta: [["공모전", "제6회 그린리모델링 챌린지 · 42초 AI 영화제 (국토교통부)"], ["기간", "2026 (공모 접수 08.12 ~ 09.30)"], ["팀 구성", "개인 프로젝트 (1인)"], ["담당", "기획 · AI 이미지/영상 생성 · 편집"]],
-    quote: "‘새는 열’이 곧 ‘새는 돈’이다.",
-    desc: [
-      "치솟는 난방비 고지서에서 출발해,\n노후 주택의 균열과 창틀 틈으로\n열이 ₩ 동전이 되어 빠져나가는 모습을 시각화했습니다.",
-      "창호·외단열·태양광이 결합되며 친환경 주택으로 재탄생하고,\n실내 22°C⁠·⁠에너지 -40%의 쾌적한 일상으로 마무리되는\n42초 AI 영상입니다.",
-    ],
-    contrib: "기획부터 AI 이미지·영상 생성, 편집까지 1인 제작",
-    cuts: [
-      ["assets/img/pf_green_c1.jpg", "문제 제기 · 치솟는 난방비 그래프"],
-      ["assets/img/pf_green_c2.jpg", "원인 · 열과 돈이 새어나가는 노후 주택"],
-      ["assets/img/pf_green_c3.jpg", "결과 · 실내 22°C, 에너지 -40%의 새 일상"],
     ],
   },
   {
